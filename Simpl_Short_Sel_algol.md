@@ -86,7 +86,7 @@ for i in range(len(data)):
     
     if i==0:
         
-        data['MTM']=0
+        data['MTM'].iloc[i]=0
     
     elif data['signal'].iloc[i]=='Short_sell':
         
