@@ -10,6 +10,13 @@ from datetime import date
 import datetime as dt
 from nsetools import Nse 
 
+"""
+short sell a stock when the drawdown is more than 50%
+and exit when drawdown is less than 37.5%
+
+"""
+
+
 ticker='INDUSINDBK'
 
 lot_size=800
