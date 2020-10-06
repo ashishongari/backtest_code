@@ -41,7 +41,7 @@ for i in range(len(data)):
         data['signal'].iloc[i]='No_Position'
         
     elif data['short_sell_signal'].iloc[i]==True and data['exit_signal'].iloc[i]==False:
-        
+  
         data['signal'].iloc[i]='Short_sell'
         
     else:
