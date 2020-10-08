@@ -83,7 +83,7 @@ def AROONOSC(period):
 AROONOSC(14)
 
 """
-RSI
+RSI Indicator
 """
 
 def RSI(period):
