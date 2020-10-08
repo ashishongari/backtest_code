@@ -140,7 +140,7 @@ def RSI(period,lot_size):
             df_backtest['Portfolio_Margin'].iloc[i] =df_backtest['Portfolio_Margin'].iloc[i-1]
     
     """"
-   Plot the equity curve
+    Plot the equity curve
     
     """
     sns.set(style="whitegrid")
