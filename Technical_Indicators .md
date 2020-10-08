@@ -81,3 +81,23 @@ def AROONOSC(period):
     return
 
 AROONOSC(14)
+
+"""
+RSI
+"""
+
+def RSI(period):
+    
+    df_rsi=stock('^NSEI')
+    df_rsi=df_rsi.historical_data()
+    df_rsi=df_rsi['Adj Close']
+    
+    rsi=talib.RSI(df_rsi, timeperiod=n)
+    sns.set(style="whitegrid")
+    plt.figure(figsize=(18,8))
+    plt.plot(rsi, color='black')
+    plt.title(f"RSI of {period} period")
+    
+    return
+
+RSI(14)
