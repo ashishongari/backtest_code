@@ -48,7 +48,7 @@ def WILLIAMS(period,lot_size):
     plt.title(f"WILLR - Williams' %R")
     
     """
-    make a datframe for backtest
+    make a dataframe for backtest
     """
     
     df_backtest=pd.concat([df['Adj Close'], wri], axis=1)
