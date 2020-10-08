@@ -46,6 +46,7 @@ def RSI(period,lot_size):
     sns.set(style="whitegrid")
     plt.figure(figsize=(18,8))
     plt.plot(rsi)
+    plt.title(f"RSI of period {n}")
 
     df_backtest=pd.concat([df, rsi], axis=1)
     df_backtest.columns=['close','rsi']
