@@ -12,8 +12,7 @@ from nsetools import Nse
 import talib
 
 """
-Create a class named stock which can helpful to pullout varoius ticker symbols 
-
+Create a class named stock 
 """
 
 class stock:
