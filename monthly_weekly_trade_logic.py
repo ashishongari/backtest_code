@@ -2,31 +2,10 @@ import pandas as pd
 import numpy as np  
 import matplotlib.pyplot as plt  
 import pandas_datareader as pdr
-import datetime 
 import yfinance as yf
-from nsepy import get_history
 from datetime import date
 import calendar
 import datetime as dt
-from nsetools import Nse
-import talib
-import seaborn as sns
-from scipy.stats import norm
-from sklearn.linear_model import LinearRegression
-from sklearn.model_selection import train_test_split 
-from sklearn.metrics import mean_squared_error, r2_score
-from sklearn import metrics
-import scipy.optimize as opt
-from sklearn.metrics import confusion_matrix 
-from sklearn.metrics import accuracy_score
-from sklearn import preprocessing
-from sklearn.neighbors import KNeighborsClassifier
-import time
-import threading
-from time import perf_counter
-import concurrent.futures
-import multiprocessing
-
 
 """
 Go Long on Nifty if Friday's 3.15 PM  Close > 9.16 AM Open else Short and exit on Monday 9.16 AM Close
