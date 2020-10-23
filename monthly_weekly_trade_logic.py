@@ -29,15 +29,14 @@ import multiprocessing
 
 
 """
-Go Long on Nifty if Friday's 3.15 PM  Close > 9.16 AM Open else Short and exit on Monday 9.16 AM
+Go Long on Nifty if Friday's 3.15 PM  Close > 9.16 AM Open else Short and exit on Monday 9.16 AM Close
 
 """
 
 def nifty_open(lot_size):
     
-    data_1=pd.read_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Trading Research\nifty20072014.csv",parse_dates=True, index_col=0)
-    # data_1=pd.read_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Trading Research\nifty20152020.csv",parse_dates=True, index_col=0)
-
+    data_1=pd.read_csv(r"",parse_dates=True, index_col=0)
+    
     date_data=data_1['Date'].unique()
     date_df=pd.DataFrame(date_data)
     date_df.columns=['Date']
@@ -107,25 +106,22 @@ def nifty_open(lot_size):
             date_df['MTM'].iloc[i]=0
 
     print(f"MTM of strategy is {date_df['MTM'].sum()}")
-    # print( date_df)
-    # date_df.to_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Short_Sell\date_df_monday_open_2007_2015.csv")
-
+    
     return
     
-nifty_open(25)
+nifty_open(75)
 
 ############################################################################################################################################
 
 
 """
-Go Long on Nifty if Friday's 3.15 PM  Close > 9.16 AM Open else Short and exit on Monday 3.15 PM
+Go Long on Nifty if Friday's 3.15 PM  Close > 9.16 AM Open else Short and exit on Monday 3.15 PM Close
 
 """
 def nifty_close(lot_size):
     
-    data_1=pd.read_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Trading Research\nifty20072014.csv",parse_dates=True, index_col=0)
-    # data_1=pd.read_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Trading Research\nifty20152020.csv",parse_dates=True, index_col=0)
-
+    data_1=pd.read_csv(r"",parse_dates=True, index_col=0)
+    
     date_data=data_1['Date'].unique()
     date_df=pd.DataFrame(date_data)
     date_df.columns=['Date']
@@ -195,14 +191,8 @@ def nifty_close(lot_size):
 
     print(f"MTM of strategy is {date_df['MTM'].sum()}")
 
-
-    # # print(date_df)
-    # date_df.to_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Short_Sell\date_df_monday_open.csv")
-
     return 
 
-nifty_close(25)
+nifty_close(75)
 
-
-#####################################################################################################################################
 
