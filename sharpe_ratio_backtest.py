@@ -26,9 +26,9 @@ def sharpe_ratio(day):
     ##############################################################################################################################################
 
     """
-    Define a universe of stock, calculate moving sharpe ratio
+    Define a universe of stock, calculate moving sharpe ratio, get the data from repo, it is names as stock_data_eod.csv
     """
-    df=pd.read_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Short_Sell\stock_data_eod.csv", index_col=0)
+    df=pd.read_csv(r"", index_col=0)
 
     df_pct=df.pct_change()
     df_pct_sum=df_pct.rolling(window=day).sum()
@@ -223,39 +223,7 @@ def sharpe_ratio(day):
     absolute_return['date']=trading_day
     print(absolute_return)
 
-    # buy_list_df.to_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Short_Sell\buy_list_df.csv")
-
+  
     return 
 
 sharpe_ratio(30)
-
-# def portfolio_analysis():
-
-#     absolute_return=pd.read_csv(r"C:\Users\DeepakShenoy\Desktop\Quantitative Research\Short_Sell\absolute_return.csv")
-
-#     absolute_return['portfolio']=0
-
-#     for i in range(len(absolute_return)):
-
-#         if i==0:
-#             absolute_return['portfolio'].iloc[i]=100
-#         else:
-#             absolute_return['portfolio'].iloc[i]= absolute_return['portfolio'].iloc[i-1]*(1+absolute_return['absolute_return'].iloc[i] )
-
-#     print(absolute_return)
-#     plt.plot( absolute_return['portfolio'])
-#     plt.title("Portfolio")
-#     plt.show()
-
-
-#     window = 50
-#     Roll_Max_portfolio = absolute_return['portfolio'].rolling(window, min_periods=1).max()
-#     Daily_Drawdown_portfolio = (absolute_return['portfolio']/Roll_Max_portfolio - 1)*100
-
-#     # Plot the results
-#     plt.plot(Daily_Drawdown_portfolio, color="blue", label="PORTFOLIO")
-#     plt.title("DRAWDOWN")
-#     plt.legend()
-#     plt.show()
-
-# portfolio_analysis()
